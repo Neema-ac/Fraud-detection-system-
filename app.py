@@ -11,7 +11,7 @@ st.title("💳 Fraud Detection System")
 st.markdown("Enter transaction data to predict if it's fraudulent.")
 
 inputs = []
-for i in range(1, 29):  # V1 to V28
+for i in range(1, 28):  # V1 to V28
     val = st.number_input(f"V{i}", value=0.0, step=0.01)
     inputs.append(val)
 
