@@ -9,9 +9,9 @@ scaler = joblib.load("scaler.pkl")
 st.set_page_config(page_title="Fraud Detection", page_icon="💳")
 st.title("💳 Fraud Detection System")
 st.markdown("Enter transaction data to predict if it's fraudulent.")
-
-inputs = []
-for i in range(1, 28):  # V1 to V28
+amount = st.number_input("Amount", value=0.0, step=0.01)
+inputs = [amount]  # Start with the extra feature
+for i in range(1, 29):  # V1 to V28
     val = st.number_input(f"V{i}", value=0.0, step=0.01)
     inputs.append(val)
 
